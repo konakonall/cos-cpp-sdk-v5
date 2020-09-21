@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A737F0DE25189DBF0066B1A2 /* libpoco.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A737F0DD25189DBF0066B1A2 /* libpoco.a */; };
+		A7DAD7BF251368CA00181071 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DAD7BE251368CA00181071 /* AppDelegate.m */; };
+		A7DAD7C2251368CA00181071 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DAD7C1251368CA00181071 /* SceneDelegate.m */; };
+		A7DAD7C5251368CA00181071 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7DAD7C4251368CA00181071 /* ViewController.mm */; };
+		A7DAD7C8251368CA00181071 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7DAD7C6251368CA00181071 /* Main.storyboard */; };
+		A7DAD7CA251368CD00181071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7DAD7C9251368CD00181071 /* Assets.xcassets */; };
+		A7DAD7CD251368CD00181071 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7DAD7CB251368CD00181071 /* LaunchScreen.storyboard */; };
+		A7DAD7D0251368CD00181071 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DAD7CF251368CD00181071 /* main.m */; };
+		A7DAD7DA251368CD00181071 /* example_cos_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DAD7D9251368CD00181071 /* example_cos_appTests.m */; };
+		A7DAD7E5251368CD00181071 /* example_cos_appUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DAD7E4251368CD00181071 /* example_cos_appUITests.m */; };
+		A7DAD80F25136D0300181071 /* cos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DAD80D25136D0300181071 /* cos.cpp */; };
+		A7DAD84625137DCC00181071 /* libcossdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DAD84525137DCC00181071 /* libcossdk.a */; };
+		A7DAD8B12513927600181071 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = A7DAD8B02513925B00181071 /* config.json */; };
+		A7DAD8E525145EEB00181071 /* libcrypto-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DAD89E2513873000181071 /* libcrypto-universal.a */; };
+		A7DAD8E625145EEB00181071 /* libssl-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DAD89F2513873000181071 /* libssl-universal.a */; };
+		A7DAD8FE251469DB00181071 /* boost.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DAD8FD251469DB00181071 /* boost.xcframework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7DAD7D6251368CD00181071 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7DAD7B2251368CA00181071 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7DAD7B9251368CA00181071;
+			remoteInfo = "example-cos-app";
+		};
+		A7DAD7E1251368CD00181071 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7DAD7B2251368CA00181071 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7DAD7B9251368CA00181071;
+			remoteInfo = "example-cos-app";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6888929B8723C5C43928282C /* Pods-example-cos-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example-cos-app.release.xcconfig"; path = "Target Support Files/Pods-example-cos-app/Pods-example-cos-app.release.xcconfig"; sourceTree = "<group>"; };
+		85EAA1C7E27504FB94C27808 /* libPods-example-cos-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-example-cos-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A737F0DD25189DBF0066B1A2 /* libpoco.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpoco.a; path = libs/poco/lib/libpoco.a; sourceTree = "<group>"; };
+		A7A1A80F2514B344000E9126 /* poco.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = poco.framework; path = libs/poco/poco.framework; sourceTree = "<group>"; };
+		A7DAD7BA251368CA00181071 /* example-cos-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-cos-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7DAD7BD251368CA00181071 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A7DAD7BE251368CA00181071 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A7DAD7C0251368CA00181071 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		A7DAD7C1251368CA00181071 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		A7DAD7C3251368CA00181071 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A7DAD7C4251368CA00181071 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		A7DAD7C7251368CA00181071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A7DAD7C9251368CD00181071 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7DAD7CC251368CD00181071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A7DAD7CE251368CD00181071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7DAD7CF251368CD00181071 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A7DAD7D5251368CD00181071 /* example-cos-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "example-cos-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7DAD7D9251368CD00181071 /* example_cos_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = example_cos_appTests.m; sourceTree = "<group>"; };
+		A7DAD7DB251368CD00181071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7DAD7E0251368CD00181071 /* example-cos-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "example-cos-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7DAD7E4251368CD00181071 /* example_cos_appUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = example_cos_appUITests.m; sourceTree = "<group>"; };
+		A7DAD7E6251368CD00181071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7DAD7FD25136A5C00181071 /* boost.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = boost.xcframework; path = frameworks/boost.xcframework; sourceTree = "<group>"; };
+		A7DAD80D25136D0300181071 /* cos.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cos.cpp; sourceTree = "<group>"; };
+		A7DAD80E25136D0300181071 /* cos.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cos.hpp; sourceTree = "<group>"; };
+		A7DAD81625137DC100181071 /* libPocoMongoDBd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoMongoDBd.a; path = libs/poco/lib/arm64/libPocoMongoDBd.a; sourceTree = "<group>"; };
+		A7DAD81725137DC100181071 /* libPocoNet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoNet.a; path = libs/poco/lib/arm64/libPocoNet.a; sourceTree = "<group>"; };
+		A7DAD81825137DC100181071 /* libPocoRedisd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoRedisd.a; path = libs/poco/lib/arm64/libPocoRedisd.a; sourceTree = "<group>"; };
+		A7DAD81925137DC100181071 /* libPocoXMLd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoXMLd.a; path = libs/poco/lib/arm64/libPocoXMLd.a; sourceTree = "<group>"; };
+		A7DAD81A25137DC100181071 /* libPocoDatad.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoDatad.a; path = libs/poco/lib/arm64/libPocoDatad.a; sourceTree = "<group>"; };
+		A7DAD81B25137DC100181071 /* libPocoMongoDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoMongoDB.a; path = libs/poco/lib/arm64/libPocoMongoDB.a; sourceTree = "<group>"; };
+		A7DAD81C25137DC100181071 /* libPocoUtild.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoUtild.a; path = libs/poco/lib/arm64/libPocoUtild.a; sourceTree = "<group>"; };
+		A7DAD81D25137DC100181071 /* libPocoEncodings.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoEncodings.a; path = libs/poco/lib/arm64/libPocoEncodings.a; sourceTree = "<group>"; };
+		A7DAD81E25137DC100181071 /* libPocoJSON.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoJSON.a; path = libs/poco/lib/arm64/libPocoJSON.a; sourceTree = "<group>"; };
+		A7DAD81F25137DC100181071 /* libPocoEncodingsd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoEncodingsd.a; path = libs/poco/lib/arm64/libPocoEncodingsd.a; sourceTree = "<group>"; };
+		A7DAD82025137DC100181071 /* libPocoFoundation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoFoundation.a; path = libs/poco/lib/arm64/libPocoFoundation.a; sourceTree = "<group>"; };
+		A7DAD82125137DC100181071 /* libPocoUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoUtil.a; path = libs/poco/lib/arm64/libPocoUtil.a; sourceTree = "<group>"; };
+		A7DAD82225137DC100181071 /* libPocoXML.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoXML.a; path = libs/poco/lib/arm64/libPocoXML.a; sourceTree = "<group>"; };
+		A7DAD82525137DC100181071 /* libPocoDataSQLited.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoDataSQLited.a; path = libs/poco/lib/arm64/libPocoDataSQLited.a; sourceTree = "<group>"; };
+		A7DAD82625137DC100181071 /* libPocoRedis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoRedis.a; path = libs/poco/lib/arm64/libPocoRedis.a; sourceTree = "<group>"; };
+		A7DAD82725137DC100181071 /* libPocoData.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoData.a; path = libs/poco/lib/arm64/libPocoData.a; sourceTree = "<group>"; };
+		A7DAD82825137DC100181071 /* libPocoJSONd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoJSONd.a; path = libs/poco/lib/arm64/libPocoJSONd.a; sourceTree = "<group>"; };
+		A7DAD82925137DC100181071 /* libPocoFoundationd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoFoundationd.a; path = libs/poco/lib/arm64/libPocoFoundationd.a; sourceTree = "<group>"; };
+		A7DAD82A25137DC100181071 /* libPocoDataSQLite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoDataSQLite.a; path = libs/poco/lib/arm64/libPocoDataSQLite.a; sourceTree = "<group>"; };
+		A7DAD82B25137DC100181071 /* libPocoNetd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoNetd.a; path = libs/poco/lib/arm64/libPocoNetd.a; sourceTree = "<group>"; };
+		A7DAD84525137DCC00181071 /* libcossdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcossdk.a; path = libs/cos/lib/libcossdk.a; sourceTree = "<group>"; };
+		A7DAD8612513818300181071 /* libPocoCrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoCrypto.a; path = libs/poco/lib/arm64/libPocoCrypto.a; sourceTree = "<group>"; };
+		A7DAD8622513818300181071 /* libPocoJWT.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoJWT.a; path = libs/poco/lib/arm64/libPocoJWT.a; sourceTree = "<group>"; };
+		A7DAD8632513818300181071 /* libPocoCryptod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoCryptod.a; path = libs/poco/lib/arm64/libPocoCryptod.a; sourceTree = "<group>"; };
+		A7DAD8642513818300181071 /* libPocoPDFd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoPDFd.a; path = libs/poco/lib/arm64/libPocoPDFd.a; sourceTree = "<group>"; };
+		A7DAD8652513818300181071 /* libPocoJWTd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoJWTd.a; path = libs/poco/lib/arm64/libPocoJWTd.a; sourceTree = "<group>"; };
+		A7DAD8662513818300181071 /* libPocoPDF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoPDF.a; path = libs/poco/lib/arm64/libPocoPDF.a; sourceTree = "<group>"; };
+		A7DAD8702513823000181071 /* libPocoNetSSL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoNetSSL.a; path = libs/poco/lib/arm64/libPocoNetSSL.a; sourceTree = "<group>"; };
+		A7DAD8712513823000181071 /* libPocoNetSSLd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoNetSSLd.a; path = libs/poco/lib/arm64/libPocoNetSSLd.a; sourceTree = "<group>"; };
+		A7DAD88C251385F900181071 /* libcurl-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcurl-universal.a"; path = "libs/curl/lib/libcurl-universal.a"; sourceTree = "<group>"; };
+		A7DAD88D251385F900181071 /* libnghttp2-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libnghttp2-universal.a"; path = "libs/curl/lib/libnghttp2-universal.a"; sourceTree = "<group>"; };
+		A7DAD89E2513873000181071 /* libcrypto-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcrypto-universal.a"; path = "libs/openssl/lib/libcrypto-universal.a"; sourceTree = "<group>"; };
+		A7DAD89F2513873000181071 /* libssl-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libssl-universal.a"; path = "libs/openssl/lib/libssl-universal.a"; sourceTree = "<group>"; };
+		A7DAD8A5251388E900181071 /* libPocoCppParser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoCppParser.a; path = libs/poco/lib/arm64/libPocoCppParser.a; sourceTree = "<group>"; };
+		A7DAD8A6251388E900181071 /* libPocoZipd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoZipd.a; path = libs/poco/lib/arm64/libPocoZipd.a; sourceTree = "<group>"; };
+		A7DAD8A7251388EA00181071 /* libPocoZip.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoZip.a; path = libs/poco/lib/arm64/libPocoZip.a; sourceTree = "<group>"; };
+		A7DAD8A8251388EA00181071 /* libPocoCppParserd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoCppParserd.a; path = libs/poco/lib/arm64/libPocoCppParserd.a; sourceTree = "<group>"; };
+		A7DAD8B02513925B00181071 /* config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		A7DAD8FD251469DB00181071 /* boost.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = boost.xcframework; path = libs/boost/boost.xcframework; sourceTree = "<group>"; };
+		A7DAD9022514B05B00181071 /* Poco.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Poco.framework; path = libs/poco/Poco.framework; sourceTree = "<group>"; };
+		A7DAD9192514B24500181071 /* poco.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = poco.xcframework; path = libs/poco/poco.xcframework; sourceTree = "<group>"; };
+		C27032FF7FCF607830AC5CFD /* Pods-example-cos-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example-cos-app.debug.xcconfig"; path = "Target Support Files/Pods-example-cos-app/Pods-example-cos-app.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7DAD7B7251368CA00181071 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A737F0DE25189DBF0066B1A2 /* libpoco.a in Frameworks */,
+				A7DAD8FE251469DB00181071 /* boost.xcframework in Frameworks */,
+				A7DAD8E525145EEB00181071 /* libcrypto-universal.a in Frameworks */,
+				A7DAD8E625145EEB00181071 /* libssl-universal.a in Frameworks */,
+				A7DAD84625137DCC00181071 /* libcossdk.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7DAD7D2251368CD00181071 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7DAD7DD251368CD00181071 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A3365926F0D177642DF04F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A737F0DD25189DBF0066B1A2 /* libpoco.a */,
+				A7A1A80F2514B344000E9126 /* poco.framework */,
+				A7DAD9192514B24500181071 /* poco.xcframework */,
+				A7DAD9022514B05B00181071 /* Poco.framework */,
+				A7DAD8FD251469DB00181071 /* boost.xcframework */,
+				A7DAD8A5251388E900181071 /* libPocoCppParser.a */,
+				A7DAD8A8251388EA00181071 /* libPocoCppParserd.a */,
+				A7DAD8A7251388EA00181071 /* libPocoZip.a */,
+				A7DAD8A6251388E900181071 /* libPocoZipd.a */,
+				A7DAD89E2513873000181071 /* libcrypto-universal.a */,
+				A7DAD89F2513873000181071 /* libssl-universal.a */,
+				A7DAD88C251385F900181071 /* libcurl-universal.a */,
+				A7DAD88D251385F900181071 /* libnghttp2-universal.a */,
+				A7DAD8702513823000181071 /* libPocoNetSSL.a */,
+				A7DAD8712513823000181071 /* libPocoNetSSLd.a */,
+				A7DAD8612513818300181071 /* libPocoCrypto.a */,
+				A7DAD8632513818300181071 /* libPocoCryptod.a */,
+				A7DAD8622513818300181071 /* libPocoJWT.a */,
+				A7DAD8652513818300181071 /* libPocoJWTd.a */,
+				A7DAD8662513818300181071 /* libPocoPDF.a */,
+				A7DAD8642513818300181071 /* libPocoPDFd.a */,
+				A7DAD84525137DCC00181071 /* libcossdk.a */,
+				A7DAD82725137DC100181071 /* libPocoData.a */,
+				A7DAD81A25137DC100181071 /* libPocoDatad.a */,
+				A7DAD82A25137DC100181071 /* libPocoDataSQLite.a */,
+				A7DAD82525137DC100181071 /* libPocoDataSQLited.a */,
+				A7DAD81D25137DC100181071 /* libPocoEncodings.a */,
+				A7DAD81F25137DC100181071 /* libPocoEncodingsd.a */,
+				A7DAD82025137DC100181071 /* libPocoFoundation.a */,
+				A7DAD82925137DC100181071 /* libPocoFoundationd.a */,
+				A7DAD81E25137DC100181071 /* libPocoJSON.a */,
+				A7DAD82825137DC100181071 /* libPocoJSONd.a */,
+				A7DAD81B25137DC100181071 /* libPocoMongoDB.a */,
+				A7DAD81625137DC100181071 /* libPocoMongoDBd.a */,
+				A7DAD81725137DC100181071 /* libPocoNet.a */,
+				A7DAD82B25137DC100181071 /* libPocoNetd.a */,
+				A7DAD82625137DC100181071 /* libPocoRedis.a */,
+				A7DAD81825137DC100181071 /* libPocoRedisd.a */,
+				A7DAD82125137DC100181071 /* libPocoUtil.a */,
+				A7DAD81C25137DC100181071 /* libPocoUtild.a */,
+				A7DAD82225137DC100181071 /* libPocoXML.a */,
+				A7DAD81925137DC100181071 /* libPocoXMLd.a */,
+				A7DAD7FD25136A5C00181071 /* boost.xcframework */,
+				85EAA1C7E27504FB94C27808 /* libPods-example-cos-app.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7DAD7B1251368CA00181071 = {
+			isa = PBXGroup;
+			children = (
+				A7DAD7BC251368CA00181071 /* example-cos-app */,
+				A7DAD7D8251368CD00181071 /* example-cos-appTests */,
+				A7DAD7E3251368CD00181071 /* example-cos-appUITests */,
+				A7DAD7BB251368CA00181071 /* Products */,
+				F1D81E5EAB823967EAB6256B /* Pods */,
+				7A3365926F0D177642DF04F8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A7DAD7BB251368CA00181071 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7DAD7BA251368CA00181071 /* example-cos-app.app */,
+				A7DAD7D5251368CD00181071 /* example-cos-appTests.xctest */,
+				A7DAD7E0251368CD00181071 /* example-cos-appUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7DAD7BC251368CA00181071 /* example-cos-app */ = {
+			isa = PBXGroup;
+			children = (
+				A7DAD7BD251368CA00181071 /* AppDelegate.h */,
+				A7DAD7BE251368CA00181071 /* AppDelegate.m */,
+				A7DAD7C0251368CA00181071 /* SceneDelegate.h */,
+				A7DAD7C1251368CA00181071 /* SceneDelegate.m */,
+				A7DAD7C3251368CA00181071 /* ViewController.h */,
+				A7DAD7C4251368CA00181071 /* ViewController.mm */,
+				A7DAD7C6251368CA00181071 /* Main.storyboard */,
+				A7DAD7C9251368CD00181071 /* Assets.xcassets */,
+				A7DAD7CB251368CD00181071 /* LaunchScreen.storyboard */,
+				A7DAD7CE251368CD00181071 /* Info.plist */,
+				A7DAD7CF251368CD00181071 /* main.m */,
+				A7DAD80D25136D0300181071 /* cos.cpp */,
+				A7DAD80E25136D0300181071 /* cos.hpp */,
+				A7DAD8B02513925B00181071 /* config.json */,
+			);
+			path = "example-cos-app";
+			sourceTree = "<group>";
+		};
+		A7DAD7D8251368CD00181071 /* example-cos-appTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7DAD7D9251368CD00181071 /* example_cos_appTests.m */,
+				A7DAD7DB251368CD00181071 /* Info.plist */,
+			);
+			path = "example-cos-appTests";
+			sourceTree = "<group>";
+		};
+		A7DAD7E3251368CD00181071 /* example-cos-appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A7DAD7E4251368CD00181071 /* example_cos_appUITests.m */,
+				A7DAD7E6251368CD00181071 /* Info.plist */,
+			);
+			path = "example-cos-appUITests";
+			sourceTree = "<group>";
+		};
+		F1D81E5EAB823967EAB6256B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C27032FF7FCF607830AC5CFD /* Pods-example-cos-app.debug.xcconfig */,
+				6888929B8723C5C43928282C /* Pods-example-cos-app.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7DAD7B9251368CA00181071 /* example-cos-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7DAD7E9251368CD00181071 /* Build configuration list for PBXNativeTarget "example-cos-app" */;
+			buildPhases = (
+				F1BAAF21F60E31F05EBAC425 /* [CP] Check Pods Manifest.lock */,
+				A7DAD7B6251368CA00181071 /* Sources */,
+				A7DAD7B7251368CA00181071 /* Frameworks */,
+				A7DAD7B8251368CA00181071 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "example-cos-app";
+			productName = "example-cos-app";
+			productReference = A7DAD7BA251368CA00181071 /* example-cos-app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A7DAD7D4251368CD00181071 /* example-cos-appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7DAD7EC251368CD00181071 /* Build configuration list for PBXNativeTarget "example-cos-appTests" */;
+			buildPhases = (
+				A7DAD7D1251368CD00181071 /* Sources */,
+				A7DAD7D2251368CD00181071 /* Frameworks */,
+				A7DAD7D3251368CD00181071 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7DAD7D7251368CD00181071 /* PBXTargetDependency */,
+			);
+			name = "example-cos-appTests";
+			productName = "example-cos-appTests";
+			productReference = A7DAD7D5251368CD00181071 /* example-cos-appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A7DAD7DF251368CD00181071 /* example-cos-appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7DAD7EF251368CD00181071 /* Build configuration list for PBXNativeTarget "example-cos-appUITests" */;
+			buildPhases = (
+				A7DAD7DC251368CD00181071 /* Sources */,
+				A7DAD7DD251368CD00181071 /* Frameworks */,
+				A7DAD7DE251368CD00181071 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7DAD7E2251368CD00181071 /* PBXTargetDependency */,
+			);
+			name = "example-cos-appUITests";
+			productName = "example-cos-appUITests";
+			productReference = A7DAD7E0251368CD00181071 /* example-cos-appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7DAD7B2251368CA00181071 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					A7DAD7B9251368CA00181071 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					A7DAD7D4251368CD00181071 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = A7DAD7B9251368CA00181071;
+					};
+					A7DAD7DF251368CD00181071 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = A7DAD7B9251368CA00181071;
+					};
+				};
+			};
+			buildConfigurationList = A7DAD7B5251368CA00181071 /* Build configuration list for PBXProject "example-cos-app" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7DAD7B1251368CA00181071;
+			productRefGroup = A7DAD7BB251368CA00181071 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7DAD7B9251368CA00181071 /* example-cos-app */,
+				A7DAD7D4251368CD00181071 /* example-cos-appTests */,
+				A7DAD7DF251368CD00181071 /* example-cos-appUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7DAD7B8251368CA00181071 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7DAD8B12513927600181071 /* config.json in Resources */,
+				A7DAD7CD251368CD00181071 /* LaunchScreen.storyboard in Resources */,
+				A7DAD7CA251368CD00181071 /* Assets.xcassets in Resources */,
+				A7DAD7C8251368CA00181071 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7DAD7D3251368CD00181071 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7DAD7DE251368CD00181071 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F1BAAF21F60E31F05EBAC425 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-example-cos-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7DAD7B6251368CA00181071 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7DAD7C5251368CA00181071 /* ViewController.mm in Sources */,
+				A7DAD7BF251368CA00181071 /* AppDelegate.m in Sources */,
+				A7DAD80F25136D0300181071 /* cos.cpp in Sources */,
+				A7DAD7D0251368CD00181071 /* main.m in Sources */,
+				A7DAD7C2251368CA00181071 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7DAD7D1251368CD00181071 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7DAD7DA251368CD00181071 /* example_cos_appTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7DAD7DC251368CD00181071 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7DAD7E5251368CD00181071 /* example_cos_appUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7DAD7D7251368CD00181071 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7DAD7B9251368CA00181071 /* example-cos-app */;
+			targetProxy = A7DAD7D6251368CD00181071 /* PBXContainerItemProxy */;
+		};
+		A7DAD7E2251368CD00181071 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7DAD7B9251368CA00181071 /* example-cos-app */;
+			targetProxy = A7DAD7E1251368CD00181071 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A7DAD7C6251368CA00181071 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7DAD7C7251368CA00181071 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A7DAD7CB251368CD00181071 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7DAD7CC251368CD00181071 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7DAD7E7251368CD00181071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A7DAD7E8251368CD00181071 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7DAD7EA251368CD00181071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C27032FF7FCF607830AC5CFD /* Pods-example-cos-app.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TD5DJDNRQ4;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/cos/include",
+					"$(PROJECT_DIR)/libs/openssl/include",
+					"$(PROJECT_DIR)/libs/poco/include",
+				);
+				INFOPLIST_FILE = "example-cos-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/cos/lib",
+					"$(PROJECT_DIR)/libs/openssl/lib",
+					"$(PROJECT_DIR)/libs/poco/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tencentyun.example-cos-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A7DAD7EB251368CD00181071 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6888929B8723C5C43928282C /* Pods-example-cos-app.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TD5DJDNRQ4;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/cos/include",
+					"$(PROJECT_DIR)/libs/openssl/include",
+					"$(PROJECT_DIR)/libs/poco/include",
+				);
+				INFOPLIST_FILE = "example-cos-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/cos/lib",
+					"$(PROJECT_DIR)/libs/openssl/lib",
+					"$(PROJECT_DIR)/libs/poco/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tencentyun.example-cos-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A7DAD7ED251368CD00181071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TD5DJDNRQ4;
+				INFOPLIST_FILE = "example-cos-appTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tencentyun.example-cos-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/example-cos-app.app/example-cos-app";
+			};
+			name = Debug;
+		};
+		A7DAD7EE251368CD00181071 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TD5DJDNRQ4;
+				INFOPLIST_FILE = "example-cos-appTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tencentyun.example-cos-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/example-cos-app.app/example-cos-app";
+			};
+			name = Release;
+		};
+		A7DAD7F0251368CD00181071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TD5DJDNRQ4;
+				INFOPLIST_FILE = "example-cos-appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tencentyun.example-cos-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "example-cos-app";
+			};
+			name = Debug;
+		};
+		A7DAD7F1251368CD00181071 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TD5DJDNRQ4;
+				INFOPLIST_FILE = "example-cos-appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tencentyun.example-cos-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "example-cos-app";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7DAD7B5251368CA00181071 /* Build configuration list for PBXProject "example-cos-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7DAD7E7251368CD00181071 /* Debug */,
+				A7DAD7E8251368CD00181071 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7DAD7E9251368CD00181071 /* Build configuration list for PBXNativeTarget "example-cos-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7DAD7EA251368CD00181071 /* Debug */,
+				A7DAD7EB251368CD00181071 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7DAD7EC251368CD00181071 /* Build configuration list for PBXNativeTarget "example-cos-appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7DAD7ED251368CD00181071 /* Debug */,
+				A7DAD7EE251368CD00181071 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7DAD7EF251368CD00181071 /* Build configuration list for PBXNativeTarget "example-cos-appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7DAD7F0251368CD00181071 /* Debug */,
+				A7DAD7F1251368CD00181071 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7DAD7B2251368CA00181071 /* Project object */;
+}
