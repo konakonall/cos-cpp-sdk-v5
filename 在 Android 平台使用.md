@@ -1,4 +1,4 @@
-## 在 iOS 上使用 COS C++ SDK
+## 在 Android 上使用 COS C++ SDK
 
 ### 依赖
 
@@ -32,10 +32,10 @@ COS SDK 依赖于如下开源库
 
 #### 2. 编译 boost
 
-参考 [Apple-Boost-BuildScript](https://github.com/faithfracture/Apple-Boost-BuildScript)
+参考 [Boost-for-Android](https://github.com/moritz-wundke/Boost-for-Android)
 
 ```shell script
-./boost.sh -ios
+./build-android.sh $(NDK_ROOT)
 ```
 
 将编译好的 framework 放置于 libs/boost
@@ -62,7 +62,7 @@ toolchain 的用法请参考 [ios-cmake](https://github.com/leetal/ios-cmake)
 
 ### 运行示例
 
-示例工程在 demo/example-ios-app 下。 
+示例工程在 demo/example-android-app 下。 
 
 将所有的静态库解压放在 `libs` 文件夹下，用 xcode 打开即可运行。
 
