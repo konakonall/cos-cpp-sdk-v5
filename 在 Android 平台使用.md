@@ -47,17 +47,46 @@ COS SDK 依赖于如下开源库
 下载 [编译脚本](https://github.com/konakonall/Poco)
 
 ```shell script
-./build.sh 1.10.1 9.0 iOS CLEAN
+/Users/wjielai/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake -H. \ 
+-B/tmp/poco-build -G'Ninja' \
+-DCMAKE_BUILD_TYPE=Release \ 
+-DCMAKE_MAKE_PROGRAM=/Users/wjielai/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja \ 
+-DCMAKE_TOOLCHAIN_FILE=/Users/wjielai/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake \ 
+-DANDROID_NATIVE_API_LEVEL=24 \ 
+-DANDROID_ABI=x86_64  \ 
+-DOPENSSL_INCLUDE_DIR=/Users/wjielai/Workspace/cos-sdk-repos/cos-cpp-sdk-v5/libs/openssl/include  \ 
+-DOPENSSL_CRYPTO_LIBRARY=/Users/wjielai/Workspace/cos-sdk-repos/cos-cpp-sdk-v5/libs/openssl/x86_64/libcrypto.a  \ 
+-DOPENSSL_SSL_LIBRARY=/Users/wjielai/Workspace/cos-sdk-repos/cos-cpp-sdk-v5/libs/openssl/x86_64/libssl.a  \ 
+-DENABLE_NETSSL=1  \ 
+-DENABLE_DATA_SQLITE=0 \ 
+-DENABLE_MONGODB=0  \
+-DENABLE_ENCODINGS=0 \
+-DENABLE_REDIS=0 \ 
+-DENABLE_JWT=0 \
+-DENABLE_ZIP=0 \
+-DENABLE_PAGECOMPILER=0 \
+-DENABLE_PAGECOMPILER_FILE2PAGE=0
+
+
+/Users/wjielai/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake --build /tmp/poco-build
 ```
 
 将编译好的 framework 放置于 libs/poco
 
 #### 4. 编译 COS SDK
 
-toolchain 的用法请参考 [ios-cmake](https://github.com/leetal/ios-cmake)
-
 ```shell script
-./build_ios.sh
+cmake .. \
+    -DCMAKE_TOOLCHAIN_FILE=/Users/wjielai/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake \
+    -DANDROID_ABI=x86_64 \
+    -DANDROID_NATIVE_API_LEVEL=24 \
+    -DANDROID=1 \
+    -DANDROID_STL=c++_shared \
+    -DOPENSSL_INCLUDE_DIR=/Users/wjielai/Workspace/cos-sdk-repos/cos-cpp-sdk-v5/libs/openssl/include \
+    -DOPENSSL_CRYPTO_LIBRARY=/Users/wjielai/Workspace/cos-sdk-repos/cos-cpp-sdk-v5/libs/openssl/x86_64/libcrypto.a \
+    -DOPENSSL_SSL_LIBRARY=/Users/wjielai/Workspace/cos-sdk-repos/cos-cpp-sdk-v5/libs/openssl/x86_64/libssl.a
+
+cmake --build . --config Release --target cossdk
 ```
 
 ### 运行示例
