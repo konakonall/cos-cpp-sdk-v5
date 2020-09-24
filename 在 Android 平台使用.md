@@ -12,15 +12,15 @@ COS SDK 依赖于如下开源库
 
 ### 使用预编译的静态库
 
-下面提供了已编译好的静态库，所有静态库都支持 arm64, x86_64。
+下面提供了已编译好的静态库，所有静态库都支持 armeabi-v7a, arm64-v8a, x86, x86_64。
 
-[boost](https://cos-sdk-archive-1253960454.cos.ap-guangzhou.myqcloud.com/cos-cpp-sdk-binary/iOS/boost.zip)
+[boost](https://cos-sdk-archive-1253960454.cos.ap-guangzhou.myqcloud.com/cos-cpp-sdk-binary/Android/boost.zip)
 
-[poco](https://cos-sdk-archive-1253960454.cos.ap-guangzhou.myqcloud.com/cos-cpp-sdk-binary/iOS/poco.zip)
+[poco](https://cos-sdk-archive-1253960454.cos.ap-guangzhou.myqcloud.com/cos-cpp-sdk-binary/Android/poco.zip)
 
-[openssl](https://cos-sdk-archive-1253960454.cos.ap-guangzhou.myqcloud.com/cos-cpp-sdk-binary/iOS/openssl.zip)
+[openssl](https://cos-sdk-archive-1253960454.cos.ap-guangzhou.myqcloud.com/cos-cpp-sdk-binary/Android/openssl.zip)
 
-[cos-sdk](https://cos-sdk-archive-1253960454.cos.ap-guangzhou.myqcloud.com/cos-cpp-sdk-binary/iOS/cos.zip)
+[cos-sdk](https://cos-sdk-archive-1253960454.cos.ap-guangzhou.myqcloud.com/cos-cpp-sdk-binary/Android/cos.zip)
 
 ### 手动编译
 
@@ -38,7 +38,7 @@ COS SDK 依赖于如下开源库
 ./build-android.sh $(NDK_ROOT)
 ```
 
-将编译好的 framework 放置于 libs/boost
+将编译好的 lib 放置于 libs/boost
 
 #### 3. 编译 poco
 
@@ -47,52 +47,31 @@ COS SDK 依赖于如下开源库
 下载 [编译脚本](https://github.com/konakonall/Poco)
 
 ```shell script
-/Users/wjielai/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake -H. \ 
--B/tmp/poco-build -G'Ninja' \
--DCMAKE_BUILD_TYPE=Release \ 
--DCMAKE_MAKE_PROGRAM=/Users/wjielai/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja \ 
--DCMAKE_TOOLCHAIN_FILE=/Users/wjielai/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake \ 
--DANDROID_NATIVE_API_LEVEL=24 \ 
--DANDROID_ABI=x86_64  \ 
--DOPENSSL_INCLUDE_DIR=/Users/wjielai/Workspace/cos-sdk-repos/cos-cpp-sdk-v5/libs/openssl/include  \ 
--DOPENSSL_CRYPTO_LIBRARY=/Users/wjielai/Workspace/cos-sdk-repos/cos-cpp-sdk-v5/libs/openssl/x86_64/libcrypto.a  \ 
--DOPENSSL_SSL_LIBRARY=/Users/wjielai/Workspace/cos-sdk-repos/cos-cpp-sdk-v5/libs/openssl/x86_64/libssl.a  \ 
--DENABLE_NETSSL=1  \ 
--DENABLE_DATA_SQLITE=0 \ 
--DENABLE_MONGODB=0  \
--DENABLE_ENCODINGS=0 \
--DENABLE_REDIS=0 \ 
--DENABLE_JWT=0 \
--DENABLE_ZIP=0 \
--DENABLE_PAGECOMPILER=0 \
--DENABLE_PAGECOMPILER_FILE2PAGE=0
+# 使用方法
+./build_android.sh $ANDROID_CMAKE_HOME $POCO_REPO_ROOT_DIR $OPENSSL_ROOT_DIR
 
+# 例如
+./build_android.sh ～/Library/Android/sdk/cmake/3.10.2.4988404 / 
+~/Workspace/libs/poco /
+~/Workspace/cos-sdk-repos/cos-cpp-sdk-v5/libs/openssl
 
-/Users/wjielai/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake --build /tmp/poco-build
+# 最终打包产物在 $PWD/Build/Android 下
 ```
 
-将编译好的 framework 放置于 libs/poco
+将编译好的 lib 放置于 libs/poco
 
 #### 4. 编译 COS SDK
 
 ```shell script
-cmake .. \
-    -DCMAKE_TOOLCHAIN_FILE=/Users/wjielai/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake \
-    -DANDROID_ABI=x86_64 \
-    -DANDROID_NATIVE_API_LEVEL=24 \
-    -DANDROID=1 \
-    -DANDROID_STL=c++_shared \
-    -DOPENSSL_INCLUDE_DIR=/Users/wjielai/Workspace/cos-sdk-repos/cos-cpp-sdk-v5/libs/openssl/include \
-    -DOPENSSL_CRYPTO_LIBRARY=/Users/wjielai/Workspace/cos-sdk-repos/cos-cpp-sdk-v5/libs/openssl/x86_64/libcrypto.a \
-    -DOPENSSL_SSL_LIBRARY=/Users/wjielai/Workspace/cos-sdk-repos/cos-cpp-sdk-v5/libs/openssl/x86_64/libssl.a
-
-cmake --build . --config Release --target cossdk
+./build_android.sh
 ```
 
 ### 运行示例
 
 示例工程在 demo/example-android-app 下。 
 
-将所有的静态库解压放在 `libs` 文件夹下，用 xcode 打开即可运行。
+1. 将所有的静态库解压放在 `app/src/main/cpp/libs` 文件夹下
+2. SDK 运行需要一个配置文件，参考 `example-android-app/config.json`，在测试机/模拟器中创建好配置文件。demo 默认从路径 `/data/data/com.tencent.cloud.cos.example/files/config.json` 读取。
+3. 用 Android Studio 打开运行。
 
 

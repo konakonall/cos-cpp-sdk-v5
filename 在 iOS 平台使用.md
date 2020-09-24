@@ -47,7 +47,13 @@ COS SDK 依赖于如下开源库
 下载 [编译脚本](https://github.com/konakonall/Poco)
 
 ```shell script
-./build.sh 1.10.1 9.0 iOS CLEAN
+# 用法
+./build_ios.sh $iOS_VERSION $POCO_REPO_ROOT_DIR
+
+# 例如
+./build_ios.sh 9.0 ~/Workspace/libs/poco
+
+# 最终打包产物在 $PWD/Build/iOS 下
 ```
 
 将编译好的 framework 放置于 libs/poco
@@ -64,6 +70,8 @@ toolchain 的用法请参考 [ios-cmake](https://github.com/leetal/ios-cmake)
 
 示例工程在 demo/example-ios-app 下。 
 
-将所有的静态库解压放在 `libs` 文件夹下，用 xcode 打开即可运行。
+1. 将所有的静态库解压放在 `libs` 文件夹下
+2. SDK 运行需要一个配置文件，在 `example-cos-app/config.json` 中填入你的密钥。
+3. 用 xcode 打开即可运行。
 
 

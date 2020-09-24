@@ -10,16 +10,20 @@ cmake_minimum_required(VERSION 3.4.1)
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/boost/x86_64/include/boost-1_73)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/boost/${ANDROID_ABI}/include/boost-1_73)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/cos/include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/openssl/include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/poco/include)
 
-add_library(local_crypto STATIC IMPORTED)
-add_library(local_openssl STATIC IMPORTED)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/poco/${ANDROID_ABI})
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/openssl/${ANDROID_ABI})
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/cos/${ANDROID_ABI})
 
 add_library(local_boost_system STATIC IMPORTED)
 add_library(local_boost_thread STATIC IMPORTED)
+
+#add_library(local_crypto STATIC IMPORTED)
+#add_library(local_openssl STATIC IMPORTED)
 
 #add_library(local_poco_crypto STATIC IMPORTED)
 #add_library(local_poco_foundation STATIC IMPORTED)
@@ -29,13 +33,22 @@ add_library(local_boost_thread STATIC IMPORTED)
 #add_library(local_poco_util STATIC IMPORTED)
 #add_library(local_poco_xml STATIC IMPORTED)
 
-add_library(local_cossdk STATIC IMPORTED)
+#add_library(local_cossdk STATIC IMPORTED)
 
-set_target_properties(local_crypto PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/openssl/${ANDROID_ABI}/libcrypto.a)
-set_target_properties(local_openssl PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/openssl/${ANDROID_ABI}/libssl.a)
+if(ANDROID_ABI STREQUAL x86)
+    SET(BOOST_ABI_NAME x32)
+elseif(ANDROID_ABI STREQUAL x86_64)
+    SET(BOOST_ABI_NAME x64)
+elseif(ANDROID_ABI STREQUAL armeabi-v7a)
+    SET(BOOST_ABI_NAME a32)
+elseif(ANDROID_ABI STREQUAL arm64-v8a)
+    SET(BOOST_ABI_NAME a64)
+endif()
+set_target_properties(local_boost_system PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/boost/${ANDROID_ABI}/lib/libboost_system-clang-darwin-mt-${BOOST_ABI_NAME}-1_73.a)
+set_target_properties(local_boost_thread PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/boost/${ANDROID_ABI}/lib/libboost_thread-clang-darwin-mt-${BOOST_ABI_NAME}-1_73.a)
 
-set_target_properties(local_boost_system PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/boost/${ANDROID_ABI}/lib/libboost_system-clang-darwin-mt-x64-1_73.a)
-set_target_properties(local_boost_thread PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/boost/${ANDROID_ABI}/lib/libboost_thread-clang-darwin-mt-x64-1_73.a)
+#set_target_properties(local_crypto PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/openssl/${ANDROID_ABI}/libcrypto.a)
+#set_target_properties(local_openssl PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/openssl/${ANDROID_ABI}/libssl.a)
 
 #set_target_properties(local_poco_crypto PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/poco/${ANDROID_ABI}/libPocoCrypto.a)
 #set_target_properties(local_poco_foundation PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/poco/${ANDROID_ABI}/libPocoFoundation.a)
@@ -45,9 +58,7 @@ set_target_properties(local_boost_thread PROPERTIES IMPORTED_LOCATION ${CMAKE_CU
 #set_target_properties(local_poco_util PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/poco/${ANDROID_ABI}/libPocoUtil.a)
 #set_target_properties(local_poco_xml PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/poco/${ANDROID_ABI}/libPocoXML.a)
 
-link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/poco/${ANDROID_ABI})
-
-set_target_properties(local_cossdk PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/cos/lib/libcossdk.a)
+#set_target_properties(local_cossdk PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/cos/lib/libcossdk.a)
 
 add_library( # Sets the name of the library.
              native-lib
@@ -56,7 +67,8 @@ add_library( # Sets the name of the library.
              SHARED
 
              # Provides a relative path to your source file(s).
-            cos.cpp
+             cos.cpp
+             logger.cpp
              native-lib.cpp )
 
 # Searches for a specified prebuilt library and stores the path as a
@@ -79,7 +91,8 @@ find_library( # Sets the name of the path variable.
 target_link_libraries( # Specifies the target library.
                        native-lib
 
-                        local_cossdk
+#                        local_cossdk
+                        cossdk
 
 #                        local_poco_crypto
 #                        local_poco_foundation
@@ -96,12 +109,10 @@ target_link_libraries( # Specifies the target library.
                         PocoXML
                         PocoFoundation
 
-                        local_crypto
-                        local_openssl
-
-                        stdc++
-
-                        pthread
+#                        local_openssl
+#                        local_crypto
+                        ssl
+                        crypto
 
                         local_boost_thread
                         local_boost_system
